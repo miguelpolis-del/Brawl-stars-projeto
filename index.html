@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10152b">
+  <title>BrawlHub — Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-mark">★</span> BRAWL<span>HUB</span></a>
+  <nav class="desktop-nav"><a href="#anuncios">Explorar</a><a href="#como-funciona">Como funciona</a></nav>
+  <div class="header-actions">
+    <button class="btn btn-outline" id="loginOpen" type="button">Entrar</button>
+    <button class="btn btn-yellow" id="publishOpen" type="button">＋ Anunciar</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu"><i></i><i></i><i></i></button>
+  </div>
+  <div class="dropdown hidden" id="menuPanel">
+    <button id="themeToggle">🌙 Modo escuro / claro</button>
+    <a href="suporte.html">✉ Suporte e reclamações</a>
+    <button id="logoutBtn" class="hidden">Sair da conta</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">O ponto de encontro da comunidade</span>
+      <h1>Seu próximo <em>grande BRAWL</em> começa aqui.</h1>
+      <p>Encontre serviços e anúncios da comunidade. Converse e combine diretamente com o vendedor.</p>
+      <div class="hero-actions"><a class="btn btn-yellow" href="#anuncios">Explorar anúncios <span>→</span></a><button class="btn btn-glass" id="heroPublish">Publicar anúncio</button></div>
+      <div class="hero-stats"><div><b>100%</b><small>contato direto</small></div><div><b>Grátis</b><small>para anunciar</small></div><div><b>Comunidade</b><small>de jogadores</small></div></div>
+    </div>
+    <div class="hero-art" aria-label="Arte temática de jogo"><div class="sunburst"></div><div class="orb orb-one">★</div><div class="orb orb-two">⚡</div><div class="game-card"><span class="card-tag">BRAWLHUB</span><div class="game-skull">☠</div><strong>READY<br>TO BRAWL?</strong><small>ENCONTRE • NEGOCIE • JOGUE</small></div><div class="spark spark-a">✦</div><div class="spark spark-b">✧</div></div>
+  </section>
+  <section class="notice"><span>⚠</span><p><b>Negocie com atenção:</b> o pagamento e a entrega são combinados diretamente entre as partes. Confira tudo antes de pagar. Nunca compartilhe senhas ou códigos de acesso.</p></section>
+  <section class="section" id="anuncios">
+    <div class="section-heading"><div><span class="eyebrow">VITRINE DA COMUNIDADE</span><h2>Anúncios em destaque</h2></div><div class="search-wrap"><span>⌕</span><input id="searchInput" placeholder="Buscar anúncio..."></div></div>
+    <div class="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Serviço">Serviços</button><button class="filter" data-filter="Conta">Contas</button><button class="filter" data-filter="Outros">Outros</button></div>
+    <div class="listing-grid" id="listingGrid"><div class="empty-state">Carregando anúncios...</div></div>
+  </section>
+  <section class="how" id="como-funciona"><span class="eyebrow">SIMPLES ASSIM</span><h2>Como funciona?</h2><div class="steps"><article><b>01</b><h3>Crie sua conta</h3><p>Entre com seu e-mail para publicar e gerenciar seus anúncios.</p></article><article><b>02</b><h3>Publique</h3><p>Adicione título, descrição, preço e pelo menos uma forma de contato.</p></article><article><b>03</b><h3>Converse direto</h3><p>O comprador fala com você pelo Instagram ou telefone para combinar.</p></article></div></section>
+</main>
+<footer><a class="brand" href="#">★ BRAWL<span>HUB</span></a><p>Projeto independente feito por fãs. Não afiliado à Supercell.</p><a href="suporte.html">Suporte</a></footer>
+<div class="modal-backdrop hidden" id="authModal"><section class="modal"><button class="close" data-close="authModal">×</button><span class="eyebrow">BEM-VINDO AO BRAWLHUB</span><h2 id="authTitle">Entrar</h2><form id="authForm"><label>E-mail<input type="email" id="authEmail" required autocomplete="email"></label><label>Senha<input type="password" id="authPassword" minlength="6" required autocomplete="current-password"></label><button class="btn btn-yellow full" id="authSubmit">Entrar</button></form><p class="switch-auth" id="authSwitch">Não tem conta? <button>Criar conta</button></p><p class="fineprint">Use um e-mail seu e uma senha exclusiva para este site.</p></section></div>
+<div class="modal-backdrop hidden" id="listingModal"><section class="modal"><button class="close" data-close="listingModal">×</button><span class="eyebrow">SUA VITRINE</span><h2>Publicar anúncio</h2><form id="listingForm"><label>Título<input id="listingTitle" maxlength="70" required placeholder="Ex.: Serviço de edição"></label><label>Categoria<select id="listingCategory"><option>Serviço</option><option>Conta</option><option>Outros</option></select></label><label>Preço (R$)<input id="listingPrice" type="number" min="0" step=".01" required placeholder="0,00"></label><label>Descrição<textarea id="listingDescription" maxlength="500" required placeholder="Explique o que está oferecendo..."></textarea></label><div class="two-fields"><label>Telefone<input id="listingPhone" placeholder="DDD + número"></label><label>Instagram<input id="listingInstagram" placeholder="@usuario"></label></div><small class="field-hint">Obrigatório preencher telefone, Instagram ou os dois.</small><button class="btn btn-yellow full">Publicar anúncio</button></form></section></div>
+<script type="module" src="app.js"></script>
+</body></html>
