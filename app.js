@@ -21,12 +21,12 @@ import {
 
 // CONFIGURAÇÃO FIREBASE
 const firebaseConfig = {
-  apiKey: "COLE_SUA_API_KEY",
-  authDomain: "SEU_PROJETO.firebaseapp.com",
-  projectId: "SEU_PROJETO",
-  storageBucket: "SEU_PROJETO.appspot.com",
-  messagingSenderId: "SEU_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: "AIzaSyDV2LIAiYJRNgzKG_AyGqoNbvYdIIaDc78",
+  authDomain: "brawlhub-5e54b.firebaseapp.com",
+  projectId: "brawlhub-5e54b",
+  storageBucket: "brawlhub-5e54b.firebasestorage.app",
+  messagingSenderId: "486617513112",
+  appId: "1:486617513112:web:4523a67b28b82a7b7824ed"
 };
 
 const configured = !Object.values(firebaseConfig).some(
